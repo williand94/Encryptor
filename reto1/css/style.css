@@ -1,0 +1,90 @@
+:root{
+    --background:     #E5E5E5;
+    --encrypt-button: #0A3871;
+    --decrypt-button: #D8DFE8;
+    --white:          #FFFFFF; 
+    --warning:        #495057; 
+    --p-message:      #343A40;
+    --p--input:       #495057;
+    --font:           'EB Garamond', serif;
+}
+
+/** Snippets **/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: var(--background);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/** Globals **/
+.container{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.encrypter{
+
+}
+
+.encrypter-content{
+
+}
+
+.logo{
+
+}
+
+.input-text .textarea{
+    background: var(--background);
+    border: none;
+}
+
+.warning{
+
+}
+
+.buttons{
+
+}
+
+.btn-encrypt{
+
+}
+
+.btn-decrypt{
+
+}
+
+.message{
+
+}
+
+
+.footer{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
