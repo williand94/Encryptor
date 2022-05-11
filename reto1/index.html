@@ -8,33 +8,37 @@
     <title>Alura Challenge</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header class="header ">
+        <div class="logo">
+            <img src="img/Logo.png" alt="Alura Logo">
+        </div>
+    </header>
     <section class="encrypter">
-        <div class="encrypter-content container">
-            <div class="logo">
-                <img src="img/Logo.png" alt="Alura Logo">
-            </div>
+        <div class="encrypter-content ">
             <div class="input-text">
-                <textarea class="textarea" cols="35" rows="20">Ingresa el texto aquí</textarea>
+                <textarea class="textarea" cols="20" rows="10">Ingresa el texto aquí</textarea>
             </div>
             <div class="warning">
-                <img src="img/Vector.png" alt="warning">
+                <div class="warning-img">
+                    <img src="img/Vector.png" alt="warning">
+                </div>
                 <p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="buttons">
                 <div class="btn-encrypt">
-                    <button>Encriptar</button>
+                    <button class="btn btn-e" >Encriptar</button>
                 </div>
                 <div class="btn-decrypt">
-                    <button>Desencriptar</button>
+                    <button class="btn btn-d">Desencriptar</button>
                 </div>
             </div>
             <div class="message">
-                <p>Ningún mensaje fue encontrado</p>
+                <textarea class="message-textarea" cols="20" rows="5">Ningún mensaje fue encontrado</textarea>
             </div>
         </div>
     </section>
@@ -42,4 +46,5 @@
         Todos los derechos reservados
     </footer>
 </body>
+
 </html>
