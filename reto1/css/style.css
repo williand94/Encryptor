@@ -1,50 +1,72 @@
-:root{
-    --background:     #E5E5E5;
+:root {
+    --background: #E5E5E5;
     --encrypt-button: #0A3871;
     --decrypt-button: #D8DFE8;
-    --white:          #FFFFFF; 
-    --warning:        #495057; 
-    --p-message:      #343A40;
-    --p--input:       #495057;
-    --font:           'EB Garamond', serif;
+    --white: #FFFFFF;
+    --warning: #495057;
+    --p-message: #343A40;
+    --p--input: #495057;
+    --font: 'EB Garamond', serif;
 }
 
 /** Snippets **/
-html{
+html {
     box-sizing: border-box;
     font-size: 62.5%;
 }
-*, *:before,*:after{
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
-body{
+body {
     background-color: var(--background);
     font-size: 1.6rem;
     line-height: 1.5;
 }
 
 /** Globals **/
-.container{
+.container {
     max-width: 120rem;
     width: 90%;
     margin: 0 auto;
 }
 
 /** Header **/
-.header .logo{   
+.header .logo {
     margin: 3rem 0 4rem -2rem;
 }
-.encrypter{
 
+@media (min-width: 768px) {
+    .header .logo {
+        margin: 5rem 0 8rem 4rem;
+    }
 }
 
-.encrypter-content{
+.encrypter-content {
     padding: 2rem;
 }
 
+@media (min-width: 768px) {
+    .encrypter-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
 
-.input-text .textarea{
+@media (min-width: 1280px) {
+    .encrypter-content {
+        display: grid;
+        grid-template-rows: 50rem 5rem 15rem;
+        grid-template-columns: 73% 21%;
+        column-gap: 8rem;
+    }
+}
+
+.input-text .textarea {
     background: var(--background);
     border: none;
     outline: none;
@@ -52,87 +74,206 @@ body{
     color: var(--encrypt-button);
     resize: none;
 }
-.warning-img{
+
+@media (min-width: 768px) {
+    .input-text .textarea {
+        width: 85%;
+        height: 55rem;
+        margin-left: 6rem;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .input-text .textarea {
+        height: 30rem;
+        margin-left: 20rem;
+    }
+}
+
+
+.warning-img {
     width: 2rem;
     height: 2rem;
+}
 
-} 
-.warning{
+.warning {
     display: flex;
     align-items: center;
 }
-.warning p{
+
+.warning p {
     margin-left: .6rem;
     color: var(--p--input);
     line-height: 1;
     vertical-align: middle;
 }
 
-.buttons .btn{
+@media (min-width: 768px) {
+    .warning p {
+        padding-left: .5rem;
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .warning-img {
+        margin-left: 6rem;
+    }
+
+    .warning-img img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .warning-img {
+        margin-left: 20.5rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .warning {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+}
+
+.buttons .btn {
     width: 100%;
-    padding: 2rem ;
+    padding: 2rem;
     border-radius: 1.5rem;
 }
 
-.btn-e{
+@media (min-width: 768px) {
+    .buttons {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 2rem;
+        
+    }
+}
+
+@media (min-width: 768px) {
+    .buttons .btn {
+        width: 100%;
+        padding: 2.5rem 10rem;
+        border-radius: 2rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .buttons  .btn-encrypt{
+        margin-left: 10rem;    }
+
+    .buttons .btn {
+        width: 100%;
+        padding: 2.5rem 15rem;
+        font-size: 2rem;
+    }
+}
+
+.btn-e {
     color: var(--white);
     background-color: var(--encrypt-button);
     border: none;
     margin-bottom: 2rem;
 }
 
-.btn-d{
+.btn-d {
     background-color: var(--background);
     color: var(--encrypt-button);
     border: 2px solid #0A3871;
-    margin-bottom: 5rem;    
-}
-.btn-decrypt{
-
+    margin-bottom: 5rem;
 }
 
-.message .message-textarea{
+.message .message-textarea {
     width: 98%;
+    height: 35rem;
     background: var(--white);
     color: var(--p--input);
     font-size: 3rem;
     font-weight: 900;
     text-align: center;
-    padding: 3rem ;
+    padding: 3rem;
     border: none;
-    border-radius: 2rem;    
+    border-radius: 2rem;
     outline: none;
     resize: none;
-    box-shadow:  10px 16px 46px  rgb(156, 155, 155);
 }
 
-.message p{
-    margin-top: -11rem;
+@media (min-width: 768px) {
+    .message .message-textarea {
+        width: 85%;
+        height: 15rem;
+        margin-left: 5rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .message .message-textarea {
+        border-radius: unset;
+        height: 25%;
+        width: 100%;
+        margin: 45rem auto;
+
+    }
+}
+
+.message p {
+    margin-top: -15rem;
     margin-bottom: 3rem;
     padding: 4rem;
     text-align: center;
     color: var(--p-message);
 }
 
-.footer p{
+@media (min-width: 1280px) { 
+    .message p{
+        margin-top: -55rem;
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .message {
+        background-image: url(../img/Muñeco.png);
+        background-position: 4rem 15rem;
+        background-repeat: no-repeat;
+        grid-column: 2 / 3;
+        grid-row: 1 / 4;
+        margin-top: -16rem;
+        border-radius: 2rem;
+        background-color: var(--white);
+        height: 88rem;
+        box-shadow: 10px 16px 46px rgb(156, 155, 155);
+    }
+}
+
+.footer p {
     text-align: center;
     color: var(--encrypt-button);
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 2rem;
+}
+@media (min-width: 1280px) { 
+    .footer p{
+        font-size: 2rem;
+    }
 }
 
 
+@media (min-width: 768px) {
+    .footer {
+        font-size: 4rem;
+        padding: 3rem;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (min-width: 1280px) { 
+    .footer{
+        margin: 0 auto;
+        padding: 0;
+    }
+}
