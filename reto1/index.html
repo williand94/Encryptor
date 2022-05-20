@@ -21,7 +21,7 @@
     <section class="encrypter">
         <div class="encrypter-content">
             <div class="input-text">
-                <textarea class="textarea" cols="20" rows="10">Ingresa el texto aquí</textarea>
+                <textarea class="textarea" id="encrypt" cols="20" rows="10" placeholder="Ingresa el texto aquí"></textarea>
             </div>
             <div class="warning">
                 <div class="warning-img">
@@ -31,21 +31,22 @@
             </div>
             <div class="buttons">
                 <div class="btn-encrypt">
-                    <button class="btn btn-e" >Encriptar</button>
+                    <button class="btn btn-e" id="btnEncrypt" >Encriptar</button>
                 </div>
                 <div class="btn-decrypt">
-                    <button class="btn btn-d">Desencriptar</button>
+                    <button class="btn btn-d" id="btnDecrypt">Desencriptar</button>
                 </div>
             </div>
-            <div class="message">
-                <textarea class="message-textarea" cols="20" rows="5">Ningún mensaje fue encontrado
+            <div class="message ecrypt-msg">
+                <textarea class="message-textarea" id="txtMessage" cols="20" rows="5">Ningún mensaje fue encontrado
                 </textarea>
-                <p class="p">Ingresa el texto que desencriptar o desencriptar</p>
+                <p class="p off">Texto a encriptado:</p>
             </div>
         </div>
     </section>
     <footer class="footer">
        <p>Todos los derechos reservados. Creado por &copy; Willian David Vallecilla Riascos</p> 
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -251,6 +251,15 @@ body {
     }
 }
 
+@media (min-width: 1280px) { 
+    .ecrypt-msg{
+        background: var(--white);
+    }
+    .off{
+        display: none;
+    }
+}
+
 .footer p {
     text-align: center;
     color: var(--encrypt-button);
