@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura Challenge</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
@@ -37,10 +37,11 @@
                     <button class="btn btn-d" id="btnDecrypt">Desencriptar</button>
                 </div>
             </div>
-            <div class="message ecrypt-msg">
-                <textarea class="message-textarea" id="txtMessage" cols="20" rows="5">Ningún mensaje fue encontrado
-                </textarea>
-                <p class="p off">Texto a encriptado:</p>
+            <div class="message set-textarea" id="ecrypt-msg">
+                <p class="p off" id="p">Texto encriptado:</p>
+                <textarea class="message-textarea" id="txtMessage" cols="20" rows="5" placeholder="Ningún mensaje fue encontrado
+                "></textarea>
+                <button class="copy btn" id="copy" >copiar</button>
             </div>
         </div>
     </section>
